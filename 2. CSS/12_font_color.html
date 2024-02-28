@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 색상</title>
+    <style>
+        body {
+            background: url('../images/bg.jpg') no-repeat fixed;
+            background-size: cover;
+            text-align: center;
+        }
+
+        #desc {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            color: #0000ff;
+        }
+
+        p {
+            color: green;
+            /* #00ff00, #0f0 */
+        }
+
+        .accent1 {
+            /* 색상, 채도, 밝기 */
+            color: hsl(120, 57%, 53%);
+            font-weight: bold;
+        }
+
+        .accent2 {
+            color: rgb(67, 204, 67);
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 160px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* 앞에 거가 없으면 뒤에 거 */
+        }
+
+        .color1 {
+            color: rgb(255, 255, 255);
+        }
+
+        .color2 {
+            color: rgb(255, 255, 255, 0.5);
+            /* 0.5는 투명도가 50% */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="desc">
+        <h1>레드향</h1>
+        <p>껍질에 붉은 빛이 돌아 <span class="accent1">레드향</span>이라 불린다.</p>
+        <p>운향과 귤속 재배식물로, 1991년 일본에서 <span class="accent2">서지향(C. 'Nishinokaori')</span>에 병감(C. reticulata var
+            poonensis)의 꽃가루를 교배해 개발한 만감류 품종이다.</p>
+        <p>보통 '귤'이라고 부르는 감귤과 모양이 비슷하지만 크기가 더 크고 색이 붉어 레드향이란 이름이 지어졌다.</p>
+    </div>
+    <h2 class="color1">HTML</h2>
+    <h2 class="color2">CSS</h2>
+</body>
+
+</html>
