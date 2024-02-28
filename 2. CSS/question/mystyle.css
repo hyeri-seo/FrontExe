@@ -1,0 +1,24 @@
+#web {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+}
+
+#tamla {
+    background-color: navy;
+    color: white;
+    width: fit-content;
+}
+
+#container {
+    color: blue;
+}
+
+li {
+    list-style-type: none;
+}
+
+b {
+    color: red;
+}
