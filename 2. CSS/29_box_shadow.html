@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 15px;
+            border: 1px solid blue;
+            border-radius: 20px;
+        }
+        .box1 {
+            box-shadow: 2px -2px 5px 0px;
+            /* 우측으로 2px 이동, 위로 2px 이동, 블러 5px 번짐, 크기 변화 없음 */
+        }
+        .box2 {
+            box-shadow: 5px 5px 15px 5px blue;
+            /* 우측으로 5px 이동, 아래로 5px 이동, 블러 15px 번짐, 크기 5px 키움 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
