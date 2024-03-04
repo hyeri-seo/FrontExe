@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 30px;
+        }
+        #box1 {background: rgb(0, 77, 243);}
+        #box2 {background: rgb(255, 72, 0);}
+        #box3 {background: rgb(18, 219, 0);}
+        .inline-box {
+            display: inline-block;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <!-- inline과 block의 속성을 모두 가짐
+    1. 줄바꿈이 이루어지지 않음
+    2. block처럼 width와 height를 지정할 수 있음
+    3. 만약 width와 heigth를 지정하지 않을 경우, inline과 같이 컨텐츠만큼 영역이 잡힘 -->
+    <div class="inline-box"></div>
+    <div class="inline-box"></div>
+    <div class="inline-box"></div>
+</body>
+</html>
