@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .navi {
+            width: 960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+        .navi ul {
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        .navi ul li {
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+        /*
+        :link - 방문하지 않는 링크 스타일 적용
+        :visited - 방문한 링크 스타일 적용
+        :hover - 마우스 위에 있을 때 스타일 적용
+        :active - 활성화, 즉 클릭했을 때
+        :focus - 초점이 맞추어졌을 때
+
+        순서는 다음과 같이 정한한다
+        순서가 바뀌면 스일일이 제대로 적용되지 않는다
+        LoVe HAte
+        :link, :visited, :hover, :active
+        */
+        .navi a:link, .navi a:visited {
+            display: block;
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navi a:hover, .navi a:focus {
+            background-color: #222;
+            color: #fff;
+        }
+        .navi a:active {
+            background-color: #f00;
+        }
+        .contents {
+            margin: 30px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+        /* 부모 안에 있는 모든 요소 중에 3번째 자식 요소 */
+        .contents :nth-child(3) {
+            background-color: #ffff00;
+        }
+        /* 상위요소 안에 있는 p 요소 중에 3번째 요소 */
+        .contents p:nth-of-type(3) {
+            background-color: #00b900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">이용 안내</a></li>
+                <li><a href="#room">객실 소개</a></li>
+                <li><a href="#reservation">예약 방법 및 요금</a></li>
+                <li><a href="79_ps_2.html">예약하기</a></li>
+            </ul>
+        </nav>
+        <div id="intro" class="contents">
+            <h2>이용 안내</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facilis odit laudantium id explicabo excepturi, ipsam beatae, eveniet harum ratione nobis esse. Magnam aperiam, sint adipisci quos magni reprehenderit consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facilis odit laudantium id explicabo excepturi, ipsam beatae, eveniet harum ratione nobis esse. Magnam aperiam, sint adipisci quos magni reprehenderit consectetur.</p>
+            <h2>객실 소개</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores quaerat repudiandae voluptatibus ad sunt dicta soluta ab est perspiciatis, ut optio pariatur, quibusdam corrupti nostrum eveniet. Sequi fugiat dolorum sunt!</p>
+            <h2>예약 방법 및 요금</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsam voluptatum quis sapiente. Et similique aliquid qui perspiciatis optio vitae, rerum aspernatur deserunt iste aperiam repudiandae numquam, facilis assumenda quidem.</p>
+        </div>
+    </div>
+</body>
+</html>

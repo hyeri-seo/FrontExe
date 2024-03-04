@@ -1,0 +1,34 @@
+#signup label {
+    float: left;
+    font-size: 13px;
+    width: 110px;
+}
+
+#signup input[type=text], #signup input[type=password],
+#signup input[type=tel], #signup input[type=email] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
+}
+
+#signup input[required] {
+    border: 1px solid red;
+}
+
+#signup input[readonly] {
+    border: none;
+}
+
+/* 마지막 fieldset을 찾아서 스타일 적용 */
+#signup fieldset:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+/* 마우스가 올라가면 */
+#signup button:hover {
+    background-color: #222;
+    color: #fff;
+}

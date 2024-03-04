@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .desc {
+            border: 5px dotted #222;
+            background-color: #ffd9a0;
+            width: 350px;
+            padding: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+        #clip-border {  /* 배경색 끝과 테두리 끝이 같음 */
+            background-clip: border-box;
+        }
+        #clip-padding {  /* 테두리 안쪽에서 배경색이 시작됨 */
+            background-clip: padding-box;
+        }
+        #clip-content {  /* 패딩 안으로 배경색 */
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border">
+            <h1>블루베리</h1>
+            <p>북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카</p>
+            <p>포도와 유사함 <em>포도와 유사함</em>포도와 유사함 <br>포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함</p>
+        </div>
+        <div class="desc" id="clip-padding">
+            <h1>블루베리</h1>
+            <p>북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카</p>
+            <p>포도와 유사함 <em>포도와 유사함</em>포도와 유사함 <br>포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함</p>
+        </div>
+        <div class="desc" id="clip-content">
+            <h1>블루베리</h1>
+            <p>북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카북아메리카</p>
+            <p>포도와 유사함 <em>포도와 유사함</em>포도와 유사함 <br>포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함포도와 유사함</p>
+        </div>
+    </div>
+</body>
+</html>
