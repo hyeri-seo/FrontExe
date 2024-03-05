@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex; /* 플렉서블 박스 컨테이너 = 플렉스 레이아웃 */
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+        }
+        .box {
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            background-color: #222;
+        }
+        p {
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* 시작 위치, 간격 */
+        #opt1 {justify-content: flex-start;}    /* 디폴트 값, 왼쪽 끝 정렬 */
+        #opt2 {justify-content: flex-end;}      /* 오른쪽 끝 정렬 */
+        #opt3 {justify-content: center;}        /* 가운데 정렬 */
+        #opt4 {justify-content: space-between;} /* 양끝 채우면서 간격 일정하게 */
+        #opt5 {justify-content: space-around;}  /* 양끝 여백 두고 간격 일정하게 */
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+</html>
