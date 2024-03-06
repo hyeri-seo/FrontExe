@@ -274,6 +274,81 @@ aside p{
     object-fit:cover;       /*가로,세로 비율에 따라 이미지가 변하지 않고 배율을 유지하고 싶을 때*/
 }
 
+/* CONTACT
+------------------------------------------------------ */
+#contact {
+    background-image: url('../../siteimages/contact-bg.jpg');
+    min-height: 100vh;
+}
+
+/* form 양식 */
+form div {
+    margin-bottom: 14px;
+}
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+input[type='text'],
+input[type='email'],
+textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+input[type='text'],
+input[type='email'] {
+    width: 100%;
+    max-width: 240px;
+}
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input[type='submit'] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* CONTACT - CAFE 정보와 구글 맵 */
+#location-map {
+    padding: 4% 0;
+}
+#location-map .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.location-info {
+    width: 22%;
+}
+.location-info p {
+    padding: 12px 10px;
+}
+.location-map {
+    width: 74%;
+}
+
+/* CONTACT SNS */
+#sns {
+    background: #faf7f0;
+    padding: 4% 0;
+}
+#sns .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#sns .sub-title {
+    margin-bottom: 30px;
+}
+.sns-box {
+    width: 30%;
+}
+
 /* 0~600px사의의 화면일 때 적용 */
 @media (max-width: 600px){
 
@@ -357,5 +432,30 @@ aside p{
     }
     .big-box img{
         height:100%;
+    }
+
+    /* CONTACT */
+    #contact .page-title {
+        margin-top: 40px;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        max-width: 100%;
+    }
+
+    /* CONTACT CAFE 정보와 구글 지도, SNS */
+    #location .wrapper,
+    #sns .wrapper {
+        flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box {
+        width: 100%;
+    }
+    .sns-box {
+        margin-bottom: 30px;
     }
 }
