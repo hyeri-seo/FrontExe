@@ -92,7 +92,22 @@ img{
 }
 
 #home{
-    background-image:url('../../../siteimages/main-bg.jpg');
+    /* 1) 배경 이미지 설정 */
+    /* background-image:url('../../../siteimages/main-bg.jpg'); */
+    
+
+    /* 2) 배경 이미지와 색상 블렌딩*/
+    /* background-color: #393;
+    background-blend-mode: hard-light; */
+
+    /* 3) 그레디언트 색상 */
+    /* 위의 이미지를 그레디언트로 덮었다 */
+    /* background-image:linear-gradient(#c9ffbf, #ffafbd); */
+
+    /* 4) 배경이미지와 그레디언트 블렌딩 */
+    background-image:url('../../../siteimages/main-bg.jpg'), linear-gradient(#c9ffbf, #ffafbd);
+    background-blend-mode: luminosity;
+
     min-height:100vh;
 }
 #home .page-title{
