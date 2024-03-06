@@ -146,15 +146,15 @@ footer p{
 
 /* news-contents의 메인기사와 사이드바의 크기 설정 */
 article{
-    order: 2;   /* order는 display:flex에서만 동작하는 속성임 */
+    order:2;        /* display:flex에서 동작하는 속성, 배치 순서*/
     width:60%;
 }
 aside{
-    order: 3;
+    order:3;
     width:22%;
 }
-.ad {
-    order: 1;
+.ad{
+    order:1;
 }
 
 .post-info{
@@ -233,21 +233,45 @@ aside p{
 }
 
 /* MENU
------------------------------------------- */
-#menu {
-    background-image: url('../../siteimages/menu-bg.jpg');
+---------------------------------------------- */
+#menu{
+    background-image: url('../../../siteimages/menu-bg.jpg');
     min-height: 100vh;
 }
-.menu-content {
-    max-width: 560px;
-    margin-top: 10%;
+.menu-content{
+    max-width:560px;
+    margin-top:10%;
 }
-.menu-content .page-title {
-    text-align: center;
+.menu-content .page-title{
+    text-align:center;
 }
-.menu-content p {
+.menu-content p{
     font-size: 1.125rem;
     margin: 10px 0 0;
+}
+
+/* MENU grid
+---------------------------------------- */
+.grid{
+    display:grid;
+    gap: 26px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, minmax(240px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.big-box{
+    grid-column: 1/3;
+    grid-row:1/3;
+}
+
+.big-box img{
+    height:94%;
+    width:100%;
+    object-fit:cover;       /*가로,세로 비율에 따라 이미지가 변하지 않고 배율을 유지하고 싶을 때*/
 }
 
 /* 0~600px사의의 화면일 때 적용 */
@@ -322,7 +346,16 @@ aside p{
     }
 
     /* MENU */
-    .menu-content {
-        margin-top: 20%;
+    .menu-content{
+        margin-top:20%;
+    }
+
+    /* MENU grid */
+    .big-box{
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img{
+        height:100%;
     }
 }
