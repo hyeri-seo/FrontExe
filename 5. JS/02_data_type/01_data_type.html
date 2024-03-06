@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        javascript와 python은 값이 전달될 때 자료형이 결정됨
+        이것을 '동적 타입 언어'라고 함
+
+        - 정적 타입 언어 : 정확한 자료형에는 정확한 값이 전달되어야 함
+                          C, C++, Java, C#
+                          특징: 규칙을 중요시함, 설계, 규약, 규격
+                                프레임워크에서 상속의 비중이 큼
+                          장점: 처음부터 정확한 문법의 표현을 중요시
+                          단점: 보수적, 기계적, 과업지향적
+
+        - 동적 타입 언어 : 값이 전달 될 때 자료형이 결정됨
+                          특징: 규칙보다 사용 중심적, 진보적, 인간중심적
+                                상속의 비중이 상대적으로 낮음. 함수의 중요도가 더 높음
+                                시대의 요구사항을 빠르게 적용하는 데에서 중요한 경우가 많음
+                          장점: 문법의 규약이 상대적으로 적음, 간단한 편
+                          단점: 문법 에러가 많이 생겨도 발견하기 어려울 때가 있음,
+                                이 언어만 가지고 대규모 프로젝트에서 사용하기에는 불리함
+                                다른 언어와 분업해서 사용하는 경우가 많음
+         */
+        let name = '홍길동';
+        console.log(name);
+        console.log(typeof(name));  //string
+        console.log(typeof name);   //위랑 같음
+
+        let num = 100;
+        console.log(num);
+        console.log(typeof num);    //number
+
+        let val = true;
+        console.log(val);
+        console.log(typeof val);    //boolean
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
