@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = prompt('홀수를 입력해주세요.', '홀수');
+        for (let i = 1; i <= num; i++) {
+            document.write('&nbsp'.repeat(num - i) + '*'.repeat(2 * i - 1) + "<br>");
+        }
+        for(let i = num-1; i >= 1; i--) {
+            document.write('&nbsp'.repeat(num - i) + '*'.repeat(2 * i - 1) + "<br>");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 7을 입력하면
+       *
+      ***
+     *****
+    *******
+     *****
+      ***
+       *
+    -->
+</body>
+
+</html>
