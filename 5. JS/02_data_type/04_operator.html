@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사칙연산
+        let result = 0;
+        result = 10 + 20;
+        document.write(result + "<br>");
+        result = 10 - 20;
+        document.write(result + "<br>");
+        result = 10 * 20;
+        document.write(result + "<br>");
+        result = 10 / 20;
+        document.write(result + "<br>");
+        result = 10 % 3;
+        document.write(result + "<br>");
+
+        //증감연산
+        let val = 10;
+        document.write(++val + "<br>"); //전위증감
+        document.write(val++ + "<br>"); //후위증감
+        document.write(val + "<br>");
+
+        //비교연산
+        let val1 = 20;
+        document.write((val > val1) + "<br>");     //false
+
+        //비교연산
+        let isResult = 10 == 10;
+        document.write(isResult + "<br>");  //true
+        isResult = 10 == '10';
+        document.write(isResult + "<br>");  //true (자동형변환 후 값을 비교해서)
+        isResult = 10 === '10';
+        document.write(isResult + "<br>");  //false (자료형이 일치하는지도 비교함)
+
+        //비교연산(C언의의 영향) => 안정성이 떨어짐
+        isResult = false == '0';
+        document.write(isResult + "<br>");  //true (false를 0과 같은 개념으로 봐서)
+        isResult = false == 0;
+        document.write(isResult + "<br>");  //true
+        isResult = "" == [];
+        document.write(isResult + "<br>");  //true
+        isResult = 0 == [];
+        document.write(isResult + "<br>");  //true
+
+        //논리연산
+        document.write((true && true) + "<br>");  //true
+        document.write((false && true) + "<br>"); //false
+        document.write((true || false) + "<br>"); //true
+        document.write(!false + "<br>");        //true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
