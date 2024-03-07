@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #999;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fish = document.getElementById('fish');
+            document.addEventListener('keydown', function (e) {
+                let x = Number(fish.style.left.slice(0, -2));
+                let y = Number(fish.style.top.slice(0, -2));
+                switch (e.keyCode) {
+                    case 37:
+                        x = x - 10;
+                        fish.style.left = x + 'px';
+                        break;
+                    case 39:
+                        x = x + 10;
+                        fish.style.left = x + 'px';
+                        break;
+                    case 38:
+                        y = y - 10;
+                        fish.style.top = y + 'px';
+                        break;
+                    case 40:
+                        y = y + 10;
+                        fish.style.top = y + 'px';
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../../images2/fish.png" id="fish">
+    </div>
+</body>
+
+</html>
