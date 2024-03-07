@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+
+        3을 입력하면
+        *
+        **
+        ***
+
+        5를 입력
+        *
+        **
+        ***
+        ****
+        *****
+
+        */
+
+        let num = prompt('1 ~ 9 중에 하나를 입력해주세요.', '1 ~ 9 중 하나의 숫자');
+
+        if (num <= 0 || dan >= 10) {
+            alert('1 ~ 9 중에 하나를 입력해주세요.');
+        }
+        for (let i = 1; i <= num; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('*');
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
