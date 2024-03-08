@@ -24,23 +24,26 @@
         document.addEventListener('DOMContentLoaded', () => {
             const fish = document.getElementById('fish');
             document.addEventListener('keydown', function (e) {
-                let x = Number(fish.style.left.slice(0, -2));
-                let y = Number(fish.style.top.slice(0, -2));
+                let computedStyle = window.getComputedStyle(fish);
+                let x = parseInt(computedStyle.left);
+                let y = parseInt(computedStyle.top);
+                // let x = Number(fish.style.left.slice(0, -2));
+                // let y = Number(fish.style.top.slice(0, -2));
                 switch (e.keyCode) {
                     case 37:
-                        x = x - 10;
+                        x -= 10;
                         fish.style.left = x + 'px';
                         break;
                     case 39:
-                        x = x + 10;
+                        x += 10;
                         fish.style.left = x + 'px';
                         break;
                     case 38:
-                        y = y - 10;
+                        y -= 10;
                         fish.style.top = y + 'px';
                         break;
                     case 40:
-                        y = y + 10;
+                        y += 10;
                         fish.style.top = y + 'px';
                         break;
                 }
