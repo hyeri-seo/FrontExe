@@ -1,0 +1,61 @@
+<!-- 물고기를 상자에 띄우고 물고기를 5초 안에 최대한 클릭할 것
+클릭한 횟수가 상자 위에 출력될 것
+5초가 지나면 더 이상 클릭 횟수가 증가하지 않음 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        #description {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        #fish {
+            position: absolute;
+            left: 240px;
+            top: 115px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 0;
+            let $fish = document.getElementById('fish');
+            let $description = document.getElementById('description');
+            let isFirstClick = true;
+            let gameEnded = false;
+            $fish.addEventListener('click', () => {
+                if(!gameEnded) {
+                    $description.textContent = `클릭한 횟수: ${++count}회`;
+                    if (isFirstClick) {
+                        isFirstClick = false;
+                        setTimeout(() => {
+                            alert('물고기 게임이 완료되었습니다.');
+                             gameEnded = true;
+                        }, 5000);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <div id="description">5초 동안 물고기를 최대한 많이 클릭하세요</div>
+        <img src="../../../images2/fish1.png" id="fish">
+    </div>
+</body>
+
+</html>
