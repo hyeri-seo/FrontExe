@@ -1,0 +1,45 @@
+<!-- 숫자가 0.1초마다 1씩 증가하는데
+버튼을 누르면 타이머가 멈추도록 작성하세요 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 4px solid black;
+            margin: 50px;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let id;
+            let count = 0;
+
+            id = setInterval(() => {
+                document.getElementById('box').textContent = ++count;
+            }, 100);
+
+            function closeCount() {
+                clearInterval(id);
+                console.log('타이머가 종료되었습니다.');
+            };
+
+            const button = document.getElementById('btn')
+                                    .addEventListener('click', closeCount);
+        });
+
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">종료 버튼</button>
+</body>
+</html>
