@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            width: 400px;
+            height: 200px;
+            top: 10px;
+            left: 100px;
+            position: absolute;
+            /* body가 최상위이면 굳이 body에 relative를 주지 않고 자식에게 absoulte를 써도 됨 */
+            border: 3px solid red;
+            box-shadow: 10px 10px #ccc;
+        }
+    </style>
+    <script>
+        /*
+        타이머를 동작시켜서 logo_01.jpg ~ logo_08.jpg로 교체하도록 만듭니다.
+        단, 방향키 상을 누르면 교체 속도가 빨라지고
+        방향키 하를 누르면 교체 속도가 느려지게 됩니다.
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            let i = 1;
+            let time = 1000;
+            let $banner = document.getElementById("banner1");
+
+            // 이미지를 변경하는 함수
+            function changeImg() {
+                i++;
+                if (i > 8) i = 1;
+                $banner.src = `../../../images2/logo_0${i}.jpg`;
+            };
+
+            // timer 변수 생성
+            let timer = setInterval(changeImg, time);
+
+            // 방향키 누를 때마다 속도 변경
+            document.body.addEventListener('keydown', function (e) {
+                switch (e.keyCode) {
+                    case 38:
+                        time /= 2;
+                        break;
+                    case 40:
+                        time *= 2;
+                        break;
+                }
+                clearInterval(timer);
+                timer = setInterval(changeImg, time);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../../../images2/logo_01.jpg" class="banner" id="banner1">
+</body>
+
+</html>
