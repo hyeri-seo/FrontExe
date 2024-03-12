@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체의 깊은 복사
+        const pet = {
+            name: '뽀삐',
+            age: 6,
+            color: '하얀색'
+        };
+
+        // 전개 연산자를 가장 아래에 썼기 때문에 변경한 속성을 덮어 써서 이름은 뽀삐, 6살이 됨
+        // -> 전개 연산자의 순서에 따라서 결과가 달라짐
+        const star = {
+            name: '별',
+            age: 3,
+            weight: '3.4kg',
+            ...pet
+        };
+
+        console.log(pet);
+        console.log(star);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

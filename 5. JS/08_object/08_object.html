@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const a = [];           // 배열
+        a.sample = 10;          // 동적 요소 추가
+        console.log(a.sample);  //10
+        console.log(typeof a);  //object
+        console.log(Array.isArray(a));  //true
+
+        function b() {};        // 함수(객체), 일급 객체
+        b.sample = 10;          // 동적 요소 추가
+        console.log(b.sample);  // 10
+        console.log(typeof b);  // function
+        console.log(Array.isArray(b)); //false
+
+        const c = 273;          //기본 타입 number
+        c.sample = 10;          //일시적으로 객체 타입 'Number'로 변환
+        console.log(c);         //273
+        console.log(c.sample);  //undefined
+        console.log(typeof c);  //number
+        console.log(c.answer = '감사합니다');   //일시적으로 객체 타입 'Number'로 변환
+        console.log(c.answer);                  //undefined. 원래 number
+        console.log('');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

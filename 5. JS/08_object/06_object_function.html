@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const pet = {
+            name: '구름',
+            eat(food) { //function 단어 안 쓰고도 가능
+                console.log(this.name + '(은/는) ' + food + '(을/를) 먹습니다.');   //this는 object
+            }
+        }
+
+        pet.eat('밥');
+        pet.eat('미역국');
+        pet.eat('라면');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
